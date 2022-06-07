@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: conversao-temperatura
 spec:
-  #replicas: 20
+  replicas: 20
   selector:
     matchLabels:
       app: conversao-temperatura
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: kubenews
-        image: ledomartinelli/conversao-temperatura:v1
+        image: ledomartinelli/conversao-temperatura:v2
 ---
 apiVersion: v1
 kind: Service
